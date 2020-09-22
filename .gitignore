@@ -1,0 +1,11 @@
+# Files
+.DS_Store
+yarn-error.log
+public/background.js
+public/background.js.LICENSE.txt
+public/browser-action.js
+public/browser-action.js.LICENSE.txt
+
+# Folders
+temp/
+node_modules/

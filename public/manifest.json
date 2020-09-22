@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "chrome-extension-react-starter",
+    "description": "You can development with react",
+    "version": "1.0",
+    "author": "huuyafwww",
+    "homepage_url":"http://huuya.ga/",
+    "icons": {
+        "16": "need 16px icon at square",
+        "48": "need 48px icon at square",
+        "128": "need 128px icon at square"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "need 19px icon at square"
+        },
+        "default_title": "chrome-extension-react-starter",
+        "default_popup": "./popup.html"
+    },
+    "background": {
+        "scripts": ["./background.js"]
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "background",
+        "notifications",
+        "tabs"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

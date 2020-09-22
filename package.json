@@ -1,0 +1,76 @@
+{
+  "author": {
+    "name": "huuyafwww",
+    "email": "huuya1234fwww@gmail.com",
+    "url": "https://huuya.ga"
+  },
+  "name": "chrome-extension-react-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "develop": "concurrently \"yarn format-watch\" \"yarn browser-action-dev\" \"yarn background-dev\"",
+    "build": "yarn format && yarn browser-action-build && yarn background-build",
+    "browser-action-build": "NODE_ENV=production webpack --progress --colors --config browser-action.webpack.config.js",
+    "browser-action-dev": "NODE_ENV=development webpack --colors --watch --config browser-action.webpack.config.js",
+    "background-build": "NODE_ENV=production webpack --progress --colors --config background.webpack.config.js",
+    "background-dev": "NODE_ENV=development webpack --colors --watch --config background.webpack.config.js",
+    "format": "prettier --config ./.prettierrc.js --write \"./src/**/{*.js,*.css}\"",
+    "format-watch": "onchange './src/**/{*.js,*.css,}' -- prettier --config ./.prettierrc.js --write {{changed}}",
+    "clean": "yarn cache clean && rm -rf ./node_modules",
+    "reset": "yarn clean && yarn install && yarn build"
+  },
+  "dependencies": {
+    "mobx": "^5.15.6",
+    "mobx-react": "^6.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "concurrently": "^5.3.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "onchange": "^7.0.2",
+    "prettier": "^2.1.2",
+    "react-svg-loader": "^3.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn eslint --fix"
+    ]
+  },
+  "private": true
+}

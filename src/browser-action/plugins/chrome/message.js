@@ -1,6 +1,5 @@
 // noew check:https://developer.chrome.com/extensions/runtime#method-sendMessage
 class Message {
-
     /**
      * Send messeage at background
      *

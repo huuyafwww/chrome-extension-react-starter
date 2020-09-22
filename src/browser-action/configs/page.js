@@ -1,1 +1,1 @@
-export default class PageConfig{}
+export default class PageConfig {}

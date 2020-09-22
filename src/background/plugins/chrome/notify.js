@@ -2,7 +2,6 @@ import { Tabs } from '@plugins';
 
 // now check:https://developer.chrome.com/extensions/notifications
 class Notify {
-
     /**
      * Run notification
      *

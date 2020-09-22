@@ -1,7 +1,6 @@
 // now check:https://developer.chrome.com/extensions/storage
 
 class Storage {
-
     /**
      * Get sync data in Chrome storage
      *

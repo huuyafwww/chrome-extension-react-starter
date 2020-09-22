@@ -64,7 +64,7 @@ and you need check manifest.json in public directory.
 
 You need embed the icons at 16, 19, 48, 128, 19 pixel size.
 
-### 本番用にbuild
+### On production environment
 
 ```sh
 # install node modules
